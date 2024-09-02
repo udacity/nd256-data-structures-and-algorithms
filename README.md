@@ -53,7 +53,7 @@ This repository is part of Udacity's course materials and is intended for educat
 
 ## License
 
-This project is licensed under Creative Common Attribution-NonCommercial- NoDerivs 3.0 License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under Creative Common Attribution-NonCommercial-NoDerivatives 4.0 International License. See the [LICENSE](LICENSE) file for more details.
 
 ## Acknowledgments
 
