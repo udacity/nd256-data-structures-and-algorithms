@@ -1,3 +1,5 @@
+
+
 """
 Read file into texts and calls.
 It's ok if you don't understand how to read files.
@@ -44,3 +46,42 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+#part A
+areaCode = set()
+
+for i in calls:
+    if i[0][0:5] != '(080)':
+        continue
+    
+    if i[1][0] == '(' :
+      end=1
+      for j in range(1,100):
+          if i[1][j] == ')' :
+              end = j
+              break
+      areaCode.add(i[1][1:end])
+    else:
+        areaCode.add(i[1][0:4])
+
+
+print("The numbers called by people in Bangalore have codes:")
+print(*sorted(areaCode),sep='\n')
+
+
+#part b
+areaCode = set()
+
+total_calls =0
+banglore_calls =0
+for i in calls:
+    if i[0][0:5] != '(080)':
+        continue
+    
+    total_calls = total_calls +1
+
+    if i[1][0:5] == '(080)':
+        banglore_calls = banglore_calls +1
+
+pct = (banglore_calls*100) /total_calls
+print (f"{pct:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")

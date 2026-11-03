@@ -20,3 +20,30 @@ Print a message:
 September 2016.".
 """
 
+duration = dict()
+
+for i in calls:
+    
+    if (i[0] not in duration):
+        duration[i[0]] = int(i[3])
+    else:
+        duration[i[0]] = int(i[3])+duration[i[0]]
+    
+    if (i[1] not in duration):
+        duration[i[1]] = int(i[3])
+    else:
+        duration[i[1]] = int(i[3])  +duration[i[1]]
+
+
+max = 0
+phone_max = None
+for phone, time in duration.items():
+    if max <time:
+        phone_max=phone
+        max =time
+
+print(f"{phone_max} spent the longest time, {max} seconds, on the phone during September 2016.")
+
+
+
+

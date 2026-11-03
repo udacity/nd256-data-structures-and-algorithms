@@ -20,3 +20,11 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 
+
+#first record of tests
+line = texts[0]
+
+last_line =calls[-1]
+
+print (f"First record of texts, {line[0]} texts {line[1]} at time {line[2]}")
+print(f"Last record of calls, {last_line[0]} calls {last_line[1]} at time {last_line[2]}, lasting {last_line[3]} seconds")
